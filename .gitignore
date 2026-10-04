@@ -1,4 +1,8 @@
-# Python
+# ==============================================================================
+# Git Ignore - AI Product Redesign Assistant
+# ==============================================================================
+
+# Python & Virtual Environments
 __pycache__/
 *.py[cod]
 *$py.class
@@ -6,6 +10,7 @@ __pycache__/
 .Python
 env/
 venv/
+.venv/
 ENV/
 build/
 develop-eggs/
@@ -23,27 +28,49 @@ wheels/
 .installed.cfg
 *.egg
 .pytest_cache/
+.coverage
+htmlcov/
 
-# Environment variables
+# Environment Variables & Secrets (NEVER COMMIT)
 .env
 .env.local
+.env.*.local
+*.pem
+*.key
 
-# SQLite Databases & Uploads
+# Preserve example configs
+!.env.example
+
+# Databases & Runtime Storage
 database/*.db
+database/*.sqlite*
+!database/.gitkeep
+
+# Uploaded Files & Temporary Assets
 backend/uploads/*
 !backend/uploads/.gitkeep
+temp/
+tmp/
 
-# Node / Frontend
+# Node.js & Frontend Build Outputs
 node_modules/
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
+dist/
+.vite/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.eslintcache
 
-# OS / IDE
+# Operating System & IDE Configurations
 .DS_Store
 Thumbs.db
+ehthumbs.db
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo

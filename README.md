@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Product Redesign Assistant
 
 > **Transform existing physical products into smarter, more sustainable, and user-centric designs with Artificial Intelligence.**
@@ -417,3 +418,6 @@ npm run build
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+=======
+# ai-product-redesign-assistant
+>>>>>>> f8ab6b58c4f69baedbd3497dc2c4f30148a777d4
