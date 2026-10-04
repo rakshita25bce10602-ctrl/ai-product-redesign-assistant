@@ -17,7 +17,7 @@ export default function App() {
 
   // Fetch API health status on load
   const fetchHealth = () => {
-    fetch('/api/health')
+    fetch('https://ai-product-redesign-assistant-1.onrender.com/api/health')
       .then(res => res.json())
       .then(data => setApiStatus(data))
       .catch(err => {
@@ -43,7 +43,7 @@ export default function App() {
     const startTime = Date.now();
 
     try {
-      const response = await fetch('/api/analyze-product', {
+      const response = await fetch('https://ai-product-redesign-assistant-1.onrender.com/api/analyze-product', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -93,7 +93,7 @@ export default function App() {
     const startTime = Date.now();
 
     try {
-      const res = await fetch('/api/demo-bottle');
+      const res = await fetch('https://ai-product-redesign-assistant-1.onrender.com/api/demo-bottle');
       if (res.ok) {
         const data = await res.json();
         const elapsed = Date.now() - startTime;
@@ -124,7 +124,7 @@ export default function App() {
   const handleSelectHistoryRecord = async (recordId) => {
     setGlobalError(null);
     try {
-      const res = await fetch(`/api/redesign/${recordId}`);
+      const res = await fetch(`https://ai-product-redesign-assistant-1.onrender.com/api/redesign/${recordId}`);
       if (res.ok) {
         const data = await res.json();
         setCurrentResult(data);
@@ -227,3 +227,4 @@ export default function App() {
     </div>
   );
 }
+
